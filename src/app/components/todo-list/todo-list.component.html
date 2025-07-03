@@ -1,0 +1,11 @@
+<div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+<ul *ngIf="todos.length > 0; else noTodos">
+  <li *ngFor="let todo of todos">
+    <input type="checkbox" [checked]="todo.isCompleted" disabled />
+    {{ todo.title }}
+  </li>
+</ul>
+
+<ng-template #noTodos>
+  <p>No todos to show.</p>
+</ng-template>
