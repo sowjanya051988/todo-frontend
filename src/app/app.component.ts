@@ -33,6 +33,8 @@ export class AppComponent implements OnInit {
     });
   }
 
+  //testing azure deployments
+
   login(): void {
     this.auth.loginWithRedirect(); // only redirect
   }
